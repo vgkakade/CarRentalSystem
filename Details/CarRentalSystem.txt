@@ -1,0 +1,35 @@
+Database Table:
+	3 tables
+admin entries to be entered manually in table
+
+1. user
+	id as primary key
+	email needs to be unique
+	password length>8 and less 15
+	first_name
+	last_name
+	isOwner boolean field Y or N
+	isAdmin boolean field Y or N
+	age number>0<100
+	gender  - dropdown
+	mobile number 10 digit
+	address = flatno, area, street
+	city
+	state
+	pincode number length 6
+	country
+
+2.car (id owner)
+	id from user table
+	Car_id
+	car_name
+	car_model
+	manufacturer
+	age number<15
+	fuel_type - drop down diesel,petrol, electric
+	seat_capacity number<9
+	book_status boolean Y or N
+	photo1 image path
+	photo2 image path
+	photo3 image path
+	photo4 image path
