@@ -1,0 +1,45 @@
+<form #f="ngForm" (ngSubmit)="save(f.value)">   <!--template driven forms-->
+    <h2 class="text-center">Car Information</h2>
+    <div class="form-group">
+        <label for="car_name">Name</label>
+        <input type="text" ngModel name="car_name" id="car_name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" ngModel name="model" id="model" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" ngModel name="age" id="age" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="car_type">Type</label>
+
+        <select class="form-control" ngModel name="car_type" id="car_type" >
+            <option value="Electric" selected="selected">Electric</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="seat">Seats</label>
+        <input type="text" id="seat" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="running">Running</label>
+        <input type="number" ngModel name="running" id="running" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="running">Price Per Km</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">INR</span>
+            <input type="number" class="form-control" ngModel name="price" id="price" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" ngModel name="imageUrl" id="imageUrl" class="form-control">
+    </div>
+    <button class="btn btn-primary m-2">Add</button>
+</form>

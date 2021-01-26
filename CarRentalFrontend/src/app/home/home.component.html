@@ -1,0 +1,45 @@
+<p>
+    <a class="btn btn-primary" routerLink="/car-add">Add Car</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Running</th>
+            <th>Type</th>
+            <th>Seats</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products$ | async">
+            <td><a [routerLink]="['/car-detail',p.$key]">{{p.carName}}</a></td>
+            <td>Price</td>
+            <td>Running</td>
+            <td>{{p.fuel_Type}}</td>
+            <td>{{p.seat_Capacity}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--<data-table
+    [items]="items"
+    [itemCount]="itemCount"
+    (reload)="reloadItems($event)"
+>
+    <data-table-column
+        [property]="'carName';"
+        [header]="'Title"
+        [sortable]="true"
+        [resizable]="true"
+    >
+    <data-table-column
+        [property]="'carAge';"
+        [header]="'Car Age"
+        [sortable]="true"
+        [resizable]="true"
+    >
+
+    </data-table-column>
+</data-table>-->
